@@ -3,8 +3,8 @@
 A hostile benchmark, not a product. Earlier drafts called this `preference-lab`. One
 idea, one name; `reveal-lab` is current.
 
-> **Status: placeholder.** There is no code here yet. This repository exists so the
-> idea is not forgotten and the name is reserved.
+> **Status: placeholder, research programme, starts after Project Tenter.** There is no
+> code here yet. This file records the method, the end state and the showpiece.
 
 ## Why it exists
 
@@ -57,6 +57,24 @@ Predictive calibration, ex-post endorsed regret, false-consent rate, human inter
 worst-served participant, privacy disclosure, steering delta, revocation time, and
 lock-in caused by the system narrowing future choices.
 
+## The end state
+
+1. **A preregistered benchmark.** The claims, the measures and the analysis are frozen
+   and published before any run.
+2. **Synthetic principals.** Each principal has a hidden objective that the benchmark
+   controls, so endorsed regret can be measured.
+3. **The listed controls.** Every control above runs in every round.
+4. **A two-sided steering detector.** It goes red on the deliberately biased mediator and
+   green on a neutral one, and the benchmark publishes both results.
+5. **A leaderboard of LLM mediators.** Each mediator gets the same principals, budgets
+   and stressors.
+
+## The showpiece
+
+The leaderboard, plus a chart of the steering delta for each mediator. The chart shows
+how far each mediator moves the principals from where they started, next to the biased
+control and the neutral control.
+
 ## The invariants this programme inherits
 
 These hold across every repository in the set. They are not decoration.
@@ -85,12 +103,12 @@ illegal construction, green on the legal one.
 
 | Repository | Role |
 |---|---|
-| [accord](https://github.com/velvetmonkey/accord) | The protocol. Opaque acceptance, minimal disclosure. |
-| [accord-settlement](https://github.com/velvetmonkey/accord-settlement) | Stateful commitments and composition above the effect boundary. |
-| [accord-contest](https://github.com/velvetmonkey/accord-contest) | Standing, challenge, remedy, precedent. |
-| [reveal-lab](https://github.com/velvetmonkey/reveal-lab) | The hostile benchmark. Lets the central claim die cheaply. |
-| [preference-kernel](https://github.com/velvetmonkey/preference-kernel) | Optional private cognition, behind the sovereign boundary. |
-| [agency-boundary](https://github.com/velvetmonkey/agency-boundary) | Roles, delegation and standing for persistent agents. |
+| [accord-settlement](https://github.com/velvetmonkey/accord-settlement) | The session guard. Stops allowed actions from combining into a leak. |
+| [accord](https://github.com/velvetmonkey/accord) | The protocol. Binding deals without disclosure of preferences. |
+| [reveal-lab](https://github.com/velvetmonkey/reveal-lab) | The hostile benchmark for LLM mediators. |
 | [seal](https://github.com/velvetmonkey/seal) | The finished authority boundary. One exact effect, one receipt. |
+
+A planned essay, "Who can object?", covers agency law for agents and standing for
+parties that a deal leaves out.
 
 Licence: [Apache-2.0](LICENSE).
